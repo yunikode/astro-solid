@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Counter from '../components/Counter.astro';
+import {Markdown} from 'astro/components';
+---
+
+
+<BaseLayout title='counter'>
+  <div class='spacer'>
+    <h1>Counter component</h1>
+    <p>The following component will hydrate once it comes into view</p>
+    <Markdown>
+    ```
+export default function SolidCounter({ children }) {
+  const [count, setCount] = createSignal(0);
+  const add = () => setCount(count() + 1);
+  const subtract = () => setCount(count() - 1);
+
+  return (
+    <>
+      <div class="counter">
+        <button onClick={subtract}>-</button>
+        <pre>{count()}</pre>
+        <button onClick={add}>+</button>
+      </div>
+      <div class="counter-message">{children}</div>
+    </>
+  );
+}
+
+    ```
+    </Markdown>
+  </div>
+  <Counter>
+    <h1>Hello, Solid!</h1>
+  </Counter>
+  <Counter>
+    <h1>Hello, Solid! 2</h1>
+  </Counter>
+  <Counter>
+    <h1>Hello, Solid! 3</h1>
+  </Counter>
+</BaseLayout>
+      
