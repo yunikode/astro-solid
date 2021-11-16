@@ -1,0 +1,45 @@
+<html><head>
+
+
+
+  
+    <title>astro | counter</title>
+  <link rel="stylesheet" href="../assets/counter.1b05ef7c.css">
+<script type="module" src="../assets/counter.a7b27f99.js"></script>
+
+</head>
+  <body>
+    <!-- Adds a navigation bar to every page. -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/counter">Counter</a>
+      <a href="/markdown">Markdown</a>
+    </nav>
+    <!-- slot: your page content will be injected here. -->
+    <div class="spacer">
+    <h1>Counter component</h1>
+    <p>The following component will hydrate once it comes into view</p>
+    <pre class="language-null"><code data-astro-raw="" class="language-null">export default function SolidCounter({ children }) {
+const [count, setCount] = createSignal(0);
+const add = () =&gt; setCount(count() + 1);
+const subtract = () =&gt; setCount(count() - 1);
+
+return (
+&lt;&gt;
+&lt;div class="counter"&gt;
+&lt;button onClick={subtract}&gt;-&lt;/button&gt;
+&lt;pre&gt;{count()}&lt;/pre&gt;
+&lt;button onClick={add}&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="counter-message"&gt;{children}&lt;/div&gt;
+&lt;/&gt;
+);
+}
+</code></pre>
+
+  </div>
+<astro-root uid="ZMciIe"><div data-hk="0.0" class="counter"><button>-</button><pre>0</pre><button>+</button></div><div data-hk="0.1" class="counter-message"><astro-fragment><h1>Hello, Solid!</h1></astro-fragment></div><script>window._$HYDRATION||(window._$HYDRATION={events:[],completed:new WeakSet})</script></astro-root>
+<astro-root uid="ZEFB4k"><div data-hk="0.0" class="counter"><button>-</button><pre>0</pre><button>+</button></div><div data-hk="0.1" class="counter-message"><astro-fragment><h1>Hello, Solid! 2</h1></astro-fragment></div><script>window._$HYDRATION||(window._$HYDRATION={events:[],completed:new WeakSet})</script></astro-root>
+<astro-root uid="1dWzeo"><div data-hk="0.0" class="counter"><button>-</button><pre>0</pre><button>+</button></div><div data-hk="0.1" class="counter-message"><astro-fragment><h1>Hello, Solid! 3</h1></astro-fragment></div><script>window._$HYDRATION||(window._$HYDRATION={events:[],completed:new WeakSet})</script></astro-root>
+  
+      </body></html>

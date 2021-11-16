@@ -1,0 +1,42 @@
+<html><head>
+
+
+
+  
+    <title>astro | markdown</title>
+  <link rel="stylesheet" href="../assets/index.45458de1.css"></head>
+  <body>
+    <!-- Adds a navigation bar to every page. -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/counter">Counter</a>
+      <a href="/markdown">Markdown</a>
+    </nav>
+    <!-- slot: your page content will be injected here. -->
+    <div class="spacer">
+    <h1>Markdown component</h1>
+    <p>Content is generated from markdown code</p>
+   
+   <pre class="language-null"><code data-astro-raw="" class="language-null">
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {Markdown} from 'astro/components';
+---
+&lt;BaseLayout title='markdown'&gt;
+&lt;div class='spacer'&gt;
+&lt;h1&gt;Markdown component&lt;/h1&gt;
+&lt;p&gt;Content is generated from markdown code&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+&lt;Markdown&gt;
+# Hello from markdown
+&lt;/Markdown&gt;
+&lt;/BaseLayout&gt;
+</code></pre>
+
+  </div><h1 id="hello-from-markdown">Hello from markdown</h1>
+
+  
+      </body></html>
