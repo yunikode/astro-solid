@@ -10,4 +10,6 @@
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the Solid renderer to support Solid JSX components.
   renderers: ['@astrojs/renderer-solid'],
+  buildOptions: {
+    site: 'https://zee-german.github.io/astro-solid/'}
 });
