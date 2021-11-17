@@ -40,9 +40,9 @@ a {
   <body>
     <!-- Adds a navigation bar to every page. -->
     <nav>
-      <a href="./">Home</a>
-      <a href="./counter">Counter</a>
-      <a href="./markdown">Markdown</a>
+      <a href={import.meta.env.MODE === 'development' ? `/` : `/astro-solid/` }>Home</a>
+      <a href={import.meta.env.MODE === 'development' ? `/` : `/astro-solid/counter`}>Counter</a>
+      <a href={import.meta.env.MODE === 'development' ? `/` : `/astro-solid/markdown`}>Markdown</a>
     </nav>
     <!-- slot: your page content will be injected here. -->
     <slot />
