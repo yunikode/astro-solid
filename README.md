@@ -14,4 +14,6 @@ Write your Solid components as `.jsx` or `.tsx` files in your project.
 
 ## Deployment
 
-```npm run build``` will build a deployable bundle in the ```/dist``` folder
+```npm run build``` will build a deployable bundle in the ```/dist``` folder.
+
+Currently there are issues with reading env variables, so I needed to hardcode my baseurl for GitHub pages deployment. You can find the configuration in ```astro.config.mjs``` on line 14, and in ```src/layouts/BaseLayout.astro``` on lines 43:45.
